@@ -5,16 +5,13 @@ pipeline {
 
         stage ('build') {
             steps {
-                sh 'mvn clean:clean'
-                sh 'mvn dependency:copy-dependencies'
-                sh 'mvn compiler:compile'
+                sh 'mvn clean compile -B'
             }
         }
 
         stage ('test') {
             steps {
-                sh 'mvn compiler:testCompile'
-                sh 'mvn test'
+                sh 'mvn test -B'
             }
         }
     }
