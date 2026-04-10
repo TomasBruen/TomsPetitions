@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage ('Setup') {}
+        stage ('Setup') {
             steps {
                 git 'https://github.com/TomasBruen/TomsPetitions.git'
-            }        
+            }     
         }
 
         stage ('build') {
@@ -16,9 +16,10 @@ pipeline {
             }
         }
 
-        stage ('Exec') {
+        stage ('test') {
             steps {
-                sh 'mvn exec:java'
+                sh 'mvn compiler:testCompile'
+                sh 'mvn test'
             }
         }
     }
