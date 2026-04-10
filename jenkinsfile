@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage ('Setup') {
-            steps {
-                git 'https://github.com/TomasBruen/TomsPetitions.git'
-            }     
-        }
 
         stage ('build') {
             steps {
