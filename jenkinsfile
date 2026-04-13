@@ -25,6 +25,12 @@ pipeline {
                 sh 'mvn -DskipTests package'
             }
         }
+        
+        stage('Deployment approval'){
+            steps {
+                input message: 'Approve deployment to Tomcat server?', ok: 'Deploy'
+            }
+        }
 
         stage ('Deploy') {
             steps {
