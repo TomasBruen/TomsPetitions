@@ -18,7 +18,7 @@ public class HTMLStorage {
         """;
         myHTML += navBar(contextPath);            
         myHTML +="""
-            <h1 class="homeGreetText"> Welcome to Tom's petition project</h1>
+            <h1 class="homeGreetText"> Welcome to Tom's petition project, Enjoy your stay!</h1>
             </body>
             </html>
         """;
