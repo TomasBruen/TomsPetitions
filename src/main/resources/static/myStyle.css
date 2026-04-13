@@ -1,0 +1,112 @@
+.myRowContainer,
+.myColumnContainer {
+    width: 100vw;
+    padding: 5px;
+    margin: 0 0 0 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myRowContainer {
+    background: #0284c7;
+    flex-direction: row;
+    margin: 0 0 10px 0;
+}
+
+.myColumnContainer {
+    background: #0284c7;
+    flex-direction: column;
+}
+
+.updateButton,
+.deleteButton {
+    padding: 2vh 4vw;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.updateButton {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+.deleteButton {
+    background: linear-gradient(135deg, #ff4b4b, #c0392b);
+}
+
+.navButton {
+    background: #7dd3fc;
+    padding: 2vh 10vw;
+    margin-inline: 20px;
+}
+
+.tableStyle {
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-inline: 2vw;
+}
+
+.titleBox {
+    background: white;
+    text-align: center;
+    font-size: 40;
+    font-family: 'Times New Roman', Times, serif;
+    width: 60%;
+    border: 2px solid black;
+    margin: 0 0 10px 0;
+}
+
+.descriptionBox {
+    background: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 60%;
+    border: 2px solid black;
+    margin: 0 0 10px 0;
+}
+
+.homeGreetText {
+    text-align: center;
+    font-size: 50;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20%;
+}
+
+.signatureForm,
+.emailForm {
+    width: 40%;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    height: 40;
+    margin: 10px 0 10px 0;
+}
+
+.buttonCol,
+.titleCol {
+    width: 10%;
+    border: 2px solid gray;
+    padding: 2px;
+}
+
+.descriptionCol {
+    width: 30%;
+    border: 2px solid gray;
+    padding: 2px;
+}
+
+.listCol {
+    width: 15%;
+    border: 2px solid gray;
+    padding: 2px;
+}
+
+.bodyColor {
+    background-color: #f0f9ff;
+    padding: 0;
+    margin: 0;
+}
