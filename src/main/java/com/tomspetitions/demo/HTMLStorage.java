@@ -7,11 +7,12 @@ public class HTMLStorage {
     public HTMLStorage(){}
 
     // Function that returns a string that contains the html for our home page
-    public String homePage(){
+    public String homePage(String contextPath){
         String myHTML = """
             <html>
-            <head>
-                <link rel="stylesheet" href="/myStyle.css">
+            <head>""";
+        myHTML += "<link rel='stylesheet' href='"+contextPath+"/myStyle.css'>";
+        myHTML+="""
             </head>
             <body class='bodyColor'>
         """;
@@ -182,7 +183,7 @@ public class HTMLStorage {
     }
 
     // This function is used to format lists of strings for display in tables.
-    // It is used on the signatures and emails parameter of petitions when on display.
+    // It is used on the signatures and emails parameter of petitions when displayed in tables
     public String listStringArray(ArrayList<String> list){
         String myHTML="";
         int count = 0;
