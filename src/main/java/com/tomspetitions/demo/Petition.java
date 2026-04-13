@@ -1,17 +1,18 @@
 package com.tomspetitions.demo;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Petition {
     private int Id;
     private String title, description;
-    private List<String> signatures;
+    private ArrayList<String> signatures, emails;
 
-    public Petition(int Id, String title, String description, List<String> signatures){
+    public Petition(int Id, String title, String description, ArrayList<String> signatures, ArrayList<String> emails){
         this.Id = Id;
         this.title = title;
         this.description = description;
         this.signatures = signatures;
+        this.emails = emails;
     }
 
     public int getId(){
@@ -35,10 +36,17 @@ public class Petition {
         this.description = description;
     }
 
-    public List<String> getSignatures(){
+    public ArrayList<String> getSignatures(){
         return signatures;
     }
-    public void setSignatures(List<String> signatures){
+    public void setSignatures(ArrayList<String> signatures){
         this.signatures = signatures;
+    }
+
+    public ArrayList<String> getEmails(){
+        return emails;
+    }
+    public void setEmails(ArrayList<String> emails){
+        this.emails = emails;
     }
 }
