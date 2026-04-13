@@ -2,16 +2,27 @@ pipeline {
     agent any
 
     stages {
+        stage ('Retrieve Code'){
+            steps{
+                git branch: "main" , url: "https://github.com/TomasBruen/TomsPetitions.git"
+            }
+        }
 
         stage ('build') {
             steps {
-                sh 'mvn clean compile -B'
+                sh 'mvn clean compile'
             }
         }
 
         stage ('test') {
             steps {
-                sh 'mvn test -B'
+                sh 'mvn test'
+            }
+        }
+
+        stage ('Package') {
+            steps {
+                sh 'mvn package -DskipTests'
             }
         }
     }
