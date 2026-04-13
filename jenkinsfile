@@ -22,7 +22,16 @@ pipeline {
 
         stage ('Package') {
             steps {
-                sh 'mvn package -DskipTests'
+                sh 'mvn -DskipTests package'
+            }
+        }
+
+        stage ('Deploy') {
+            steps {
+                sh 'sudo systemctl stop tomcat'
+                sh 'rm -rf /opt/tomcat/webapps/*.war'
+                sh 'cp target/app.war /opt/tomcat/webapps/'
+                sh 'sudo systemctl start tomcat'
             }
         }
     }
