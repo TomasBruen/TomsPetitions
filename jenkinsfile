@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sh 'sudo systemctl stop tomcat'
                 sh 'rm -rf /opt/tomcat/webapps/*.war'
-                sh 'cp var/lib/jenkins/workspace/CT2509_Assignment_Pipeline@2/target/*.war /opt/tomcat/webapps/'
+                sh 'cp target/*.war /opt/tomcat/webapps/'
                 sh 'sudo systemctl start tomcat'
             }
         }
